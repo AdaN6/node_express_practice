@@ -30,6 +30,7 @@ app.get('/users/:id', (req, res) => {
      `req.params is id and the value is ${req.params.id}\n req.query is ${req.query.sort}`);
     })
 
+
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}`);
 });
