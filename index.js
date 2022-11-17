@@ -2,19 +2,20 @@ import express from "express";
 const app = express();
 const port = process.env.PPRT || 3000;
 
-app.get("/", (req, res) => {
+app
+.route('/')
+.get("/", (req, res) => {
   res.send("This is a get request");
 });
-app.post("/", (req, res) => {
+post("/", (req, res) => {
   res.send("Hello this is a post request!");
 });
-app.put("/", (req, res) => {
+put("/", (req, res) => {
   res.send("Hello this is a put request");
 });
-app.delete("/", (req, res) => {
+delete("/", (req, res) => {
   res.send("Hello this is a delete request");
 });
-
-app.listen(port, () => {
+listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
