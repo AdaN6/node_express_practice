@@ -1,9 +1,18 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const port = 3000;
+const port = process.env.PPRT || 3000;
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("This is a get request");
+});
+app.post("/", (req, res) => {
+  res.send("Hello this is a post request!");
+});
+app.put("/", (req, res) => {
+  res.send("Hello this is a put request");
+});
+app.delete("/", (req, res) => {
+  res.send("Hello this is a delete request");
 });
 
 app.listen(port, () => {
